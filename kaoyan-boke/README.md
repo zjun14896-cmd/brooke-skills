@@ -1,0 +1,74 @@
+# 考研播客 kaoyan-boke
+
+把一道考研论述题做成单人讲故事式的播客逐字稿（纯文本 TXT），交给语音合成后存在手机里，走路、通勤时听。
+
+> Turn one essay question into a single-host storytelling podcast transcript for text-to-speech, to listen to while walking or commuting.
+
+当前版本：`v1.0.0`（更新记录见 [CHANGELOG](CHANGELOG.md)）
+
+## 它解决什么问题
+
+背诵和答题靠理解版、答题版和知识卡片。路上不方便看稿，需要一份能放松听、在脑子里留下画面的稿子，用来回忆“这道题在讲什么”。逐字稿重在听懂，不在背原文。
+
+这个 Skill 只做逐字稿，不生成音频：
+
+```text
+理解版 / 答题版（没有则直接读原文，先理清逻辑）
+      ↓
+单人讲故事播客逐字稿
+      ↓
+第N题_播客逐字稿.txt
+```
+
+## 核心原则
+
+- 一道题一条故事主线：整题一个贯穿始终的大比喻或大故事，每个自然段是其中一幕，各幕用同一批人物和场景，前后呼应。
+- 讲故事，不念原文：故事部分尽量不出现原文原话，用画面、动作、对话讲出来。
+- 大白话优先，术语后出：先用大白话讲清楚，再说“这个意思，考试的时候叫××”。
+- 抽象处多讲一句：遇到抽象概念，用生活例子再解释一次。
+- 比喻降低理解成本，不增加记忆负担：比喻从理解版引申，准确对应原意；不加新知识点、新人名、新作品。为了主线做的简化，交付时告诉用户。
+
+## 产出格式
+
+- 纯文本 `.txt`，文件名 `第N题_播客逐字稿.txt`。
+- 不留空行，一个自然段一行。
+- 停顿靠标点，句子要短；不用 Markdown、列表符号、箭头、括号、表情、英文缩写；数字写成汉字。
+
+## 长度
+
+整题约 4000 个汉字以内，按每分钟约 250 字估算，约 16 分钟。
+
+## 和 kaoyan-beiti 的关系
+
+优先用这道题的理解版和答题版当输入（见 [kaoyan-beiti](../kaoyan-beiti/)）。没有的话直接读原文，先理清逻辑再写。
+
+## 安装
+
+### 下载 ZIP
+
+1. 在 GitHub 页面选择 **Code → Download ZIP**。
+2. 解压后，把其中的 `kaoyan-boke` 文件夹放进 Codex 或 Claude 的个人 Skills 目录。
+
+### 使用 Git
+
+```powershell
+git clone https://github.com/zjun14896-cmd/brooke-skills.git
+Copy-Item -Recurse brooke-skills\kaoyan-boke "$env:USERPROFILE\.codex\skills\kaoyan-boke"
+```
+
+## 使用
+
+把一道论述题交给 AI，然后说：
+
+```text
+请用 $kaoyan-boke 把第 N 题做成播客逐字稿。
+```
+
+## 它不会做什么
+
+- 不会生成音频。逐字稿交给你自己接语音合成。
+- 不会加新知识点、新人名、新作品。
+
+## License
+
+[MIT](../LICENSE)
