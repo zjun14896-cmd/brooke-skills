@@ -1,0 +1,6 @@
+interface:
+  display_name: "考研背题"
+  short_description: "把论述题参考答案原文整理成理解版、答题版两份背诵稿和知识卡片"
+  default_prompt: "Use $kaoyan-beiti to turn this essay-question reference answer into an understanding version and an exam version for memorization."
+policy:
+  allow_implicit_invocation: true
