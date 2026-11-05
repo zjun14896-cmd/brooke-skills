@@ -1,0 +1,4 @@
+interface:
+  display_name: "出海匠图搜选品"
+  short_description: "上传商品图，采集前六款并交付 Excel、详情截图和销量榜首主图"
+  default_prompt: "使用 $chuhaijiang-image-sourcing，用我上传的图片跑一遍 TikTok 美国站图搜选品。"

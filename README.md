@@ -8,6 +8,7 @@
 |---|---|---|
 | [kaoyan-beiti 考研背题](kaoyan-beiti/) | 把论述题参考答案原文整理成理解版、答题版两份背诵稿和知识卡片 | v1.1.0 |
 | [kaoyan-boke 考研播客](kaoyan-boke/) | 把考研论述题做成单人讲故事式的播客逐字稿（TXT，供语音合成） | v1.1.0 |
+| [chuhaijiang-image-sourcing 出海匠图搜选品](chuhaijiang-image-sourcing/) | 上传商品图在出海匠做 TikTok 图搜同款，采集前 6 款并交付 Excel、详情截图和销量榜首主图 | v1.0.0 |
 
 ## 怎么用
 
