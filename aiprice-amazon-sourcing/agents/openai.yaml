@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIPrice 图搜与 Amazon 六家公司采集"
+  short_description: "从一张产品图生成 Google Lens、Amazon 长截图和六家公司采集表"
+  default_prompt: "请用 $aiprice-amazon-sourcing 按确认标准处理这张产品图，交付六家公司 Excel、Amazon 前12项长截图和 Google Lens 前16项长截图。"
